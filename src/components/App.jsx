@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
-import { API_BASE_URL } from "../../secrets.json";
 import Image from "next/image";
 
 const App = () => {
@@ -12,7 +11,9 @@ const App = () => {
   const generatePDF = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`${API_BASE_URL}/generate-pdf`);
+      const { data } = await axios.get(
+        `${process.env.API_BASE_URL}/generate-pdf`
+      );
 
       window.open(data.url, "_blank");
     } catch (err) {
