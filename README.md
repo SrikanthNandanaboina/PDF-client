@@ -2,6 +2,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+To test it live
+
+```
+https://pdf-client.vercel.app/
+```
+
 First, run the development server:
 
 ```bash
