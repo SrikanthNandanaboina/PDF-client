@@ -12,7 +12,7 @@ const App = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `${process.env.API_BASE_URL}/generate-pdf`
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/generate-pdf`
       );
 
       window.open(data.url, "_blank");
